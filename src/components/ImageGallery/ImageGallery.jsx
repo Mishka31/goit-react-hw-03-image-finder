@@ -45,7 +45,7 @@ export class ImageGallery extends Component {
     }
   }
 
-  takeNextPage = () =>
+  takeNextPage = () => {
     fetchArray(this.props.value, this.state.page).then((res) => {
       this.setState((prevState) => {
         return {
@@ -55,6 +55,7 @@ export class ImageGallery extends Component {
         };
       });
     });
+  };
 
   onClickPciture = (e, alt) =>
     this.setState({ largeUrl: e, tag: alt, showModal: true });
