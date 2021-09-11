@@ -54,6 +54,10 @@ export class ImageGallery extends Component {
           status: "resolved",
         };
       });
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth",
+      });
     });
   };
 
